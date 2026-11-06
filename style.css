@@ -1,0 +1,423 @@
+:root {
+    /* Nilai cadangan; yang dipakai nanti dari config.js */
+    --primary: #4F46E5;
+    --accent:  #FFE45C;
+    --paper:   #F8FAFC;
+    --card:    #FFFFFF;
+    --ink:     #1E293B;
+    --line:    #E2E8F0;
+    --radius:  14px;
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+  }
+  
+  [hidden] {
+    display: none !important;
+  }
+  
+  body {
+    display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: 'DM Sans', system-ui, sans-serif;
+  line-height: 1.55;
+  color: var(--ink);
+  
+  /* Warna dasar (jika gambar gagal dimuat) */
+  background-color: var(--paper);
+  
+  /* ✅ GAMBAR UNTUK MODE TERANG (LIGHT MODE) */
+  background-image: url('img/back.jpeg'); 
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  
+  transition: background-color .25s, color .25s;
+  }
+  
+  
+  h1, h2 {
+    font-family: 'Bricolage Grotesque', sans-serif;
+  }
+  
+  /* ----------------------------- 2. TATA LETAK ----------------------------- */
+  .layout {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    align-items: start;
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 72px 20px 40px;
+  }
+  
+  @media (min-width: 900px) {
+    .layout {
+      grid-template-columns: 1fr 1.2fr;
+      gap: 64px;
+      padding-top: 80px;
+    }
+    .profile {
+      position: sticky;
+      top: 80px;
+    }
+  }
+  
+  /* ------------------------------- 3. PROFIL ------------------------------- */
+  .profile {
+    text-align: center;
+  }
+  
+  .avatar {
+    display: grid;
+    place-items: center;
+    width: 140px;
+    height: 140px;
+    margin: 0 auto 22px;
+    overflow: hidden;
+    border: 5px solid var(--card);
+    outline: 2px solid var(--line);
+    border-radius: 50%;
+    background: var(--accent);
+    color: #14172B;
+    font: 800 3.6rem 'Bricolage Grotesque', sans-serif;
+    transform: rotate(-5deg);
+  }
+  
+  .avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  h1 {
+    font-size: clamp(2.2rem, 6vw, 2.8rem);
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -.02em;
+  }
+  
+  .bio {
+    max-width: 34ch;
+    margin: 8px auto 0;
+    opacity: .7;
+  }
+  
+  /* ----------------------------- 4. IKON SOSMED ----------------------------- */
+  .socials {
+    display: flex;
+    justify-content: center;
+    gap: 14px;
+    margin-top: 22px;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .socials a {
+    display: grid;
+    place-items: center;
+    width: 56px;
+    height: 56px;
+    border: 1px solid var(--line);
+    border-radius: 50%;
+    background: var(--card);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .06);
+    font-size: 1.5rem;
+    text-decoration: none;
+    transition: transform .15s, border-color .15s;
+    overflow: hidden;           /* ✅ TAMBAH: agar gambar tidak meluber */
+  }
+
+  .socials img {
+  width: 65%;
+  height: 65%;
+  object-fit: contain;        /* gambar utuh, tidak terpotong */
+}
+
+.socials a:hover,
+.socials a:focus-visible {
+  transform: translateY(-3px);
+  border-color: var(--primary);
+}
+
+.socials img {
+    width: 65%;
+    height: 65%;
+    object-fit: contain;
+  }
+  
+  /* ------------------------- 5. LINK SAYA (TAB + KARTU) ------------------------- */
+  .links .icon-img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+  } 
+
+  .label {
+    margin-bottom: 12px;
+    font: 500 1rem 'DM Sans', sans-serif;
+    text-transform: uppercase;
+    opacity: .7;
+  }
+  
+  .tabs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  
+  .tab {
+    padding: 10px 22px;
+    border: 1px solid var(--line);
+    border-radius: 30px;
+    background: var(--card);
+    color: var(--ink);
+    font: 700 .95rem 'DM Sans', sans-serif;
+    cursor: pointer;
+    transition: background .15s, border-color .15s;
+  }
+  
+  .tab:hover {
+    border-color: var(--primary);
+  }
+  
+  .tab[aria-selected="true"] {
+    border-color: var(--primary);
+    background: var(--primary);
+    color: #fff;
+  }
+  
+  .count {
+    margin: 18px 0 12px;
+    opacity: .65;
+  }
+  
+  .links {
+    display: grid;
+    gap: 14px;
+    padding: 0;
+    list-style: none;
+  }
+  
+  .links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 22px 18px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--card);
+    box-shadow: 0 1px 4px rgba(0, 0, 0, .04);
+    color: var(--ink);
+    font-size: 1.05rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform .15s, border-color .15s;
+  }
+  
+  .links a:hover,
+  .links a:focus-visible {
+    transform: translateY(-2px);
+    border-color: var(--primary);
+  }
+  
+  .links .icon {
+    font-size: 1.3rem;
+  }
+  
+  /* ------------------------- 6. BAGIAN TAMBAHAN ------------------------- */
+  .block {
+    margin-top: 48px;
+    scroll-margin-top: 20px;
+  }
+  
+  .block h2 {
+    margin-bottom: 16px;
+    font-size: 1.6rem;
+    font-weight: 800;
+  }
+  
+  /* --- Layanan & harga --- */
+  .services {
+    display: grid;
+    gap: 12px;
+  }
+  
+  .service {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 2px 12px;
+    padding: 16px 18px;
+    border: 1px solid var(--line);
+    border-radius: var(--radius);
+    background: var(--card);
+  }
+  
+  .service .price {
+    color: var(--primary);
+    font-weight: 800;
+  }
+  
+  [data-theme="dark"] .service .price {
+    color: var(--accent);
+  }
+
+  [data-theme="dark"] body {
+    background-image: url('img/back2.jpeg');
+  }
+  
+  .service p {
+    grid-column: 1 / -1;
+    font-size: .92rem;
+    opacity: .75;
+  }
+  
+  /* --- Portofolio (2 kolom) --- */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+  
+  .work {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    aspect-ratio: 1;
+    padding: 12px;
+    border-radius: var(--radius);
+    background-position: center;
+    background-size: cover;
+    color: #14172B;
+    transition: transform .2s;
+  }
+  
+  .work:hover {
+    transform: scale(1.03);
+  }
+  
+  .work b {
+    width: fit-content;
+    padding: 2px 10px;
+    border-radius: 10px;
+    background: #fff;
+  }
+  
+  .work span {
+    width: fit-content;
+    margin-top: 4px;
+    padding: 0 10px;
+    border-radius: 10px;
+    background: #14172B;
+    color: #fff;
+    font-size: .8rem;
+  }
+  
+  /* --- Form pesan --- */
+  .order {
+    display: grid;
+    gap: 12px;
+  }
+  
+  label {
+    display: grid;
+    gap: 4px;
+    font-size: .92rem;
+    font-weight: 700;
+  }
+  
+  input, select, textarea {
+    padding: 11px 12px;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: var(--card);
+    color: var(--ink);
+    font: inherit;
+  }
+  
+  .btn {
+    padding: 14px;
+    border: 0;
+    border-radius: var(--radius);
+    background: var(--primary);
+    color: #fff;
+    font: 700 1rem 'DM Sans';
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    filter: brightness(1.1);
+  }
+  
+  /* ------------------- 7. FOOTER, TOMBOL TEMA, NOTIFIKASI ------------------- */
+  .foot {
+    padding: 24px 20px 32px;
+    font-size: .85rem;
+    text-align: center;
+    opacity: .7;
+  }
+  
+  .share {
+    margin-bottom: 6px;
+    border: none;
+    background: none;
+    color: inherit;
+    font: inherit;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  
+  .theme {
+    position: fixed;
+    top: 16px;
+    right: 16px;
+    z-index: 5;
+    width: 48px;
+    height: 48px;
+    border: 1px solid var(--line);
+    border-radius: 50%;
+    background: var(--card);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, .08);
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+  
+  .toast {
+    position: fixed;
+    bottom: 24px;
+    left: 50%;
+    padding: 10px 18px;
+    border-radius: 30px;
+    background: var(--ink);
+    color: var(--paper);
+    font-weight: 700;
+    transform: translate(-50%, 80px);
+    transition: transform .25s;
+  }
+  
+  .toast.show {
+    transform: translate(-50%, 0);
+  }
+  
+  /* ---------------------------- 8. AKSESIBILITAS ---------------------------- */
+  input:focus,
+  select:focus,
+  textarea:focus,
+  button:focus-visible,
+  a:focus-visible {
+    outline: 3px solid var(--primary);
+    outline-offset: 2px;
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      transition: none !important;
+    }
+  }
