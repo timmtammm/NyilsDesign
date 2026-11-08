@@ -48,8 +48,8 @@ const SITE = {
   
     /* --------------------------------- 4. LINK --------------------------------- */
     links: [
-        { group: "sosmed",  icon: "img/instagram.png", label: "Instagram", url: "https://instagram.com/" },
-        { group: "sosmed",  icon: "img/tiktok.png",    label: "TikTok",    url: "https://tiktok.com/" },
+        { group: "sosmed",  icon: "img/instagram.png", label: "Instagram", url: "https://www.instagram.com/nyils.design/" },
+        { group: "sosmed",  icon: "img/tiktok.png",    label: "TikTok",    url: "https://www.tiktok.com/@kukuhbudisz" },
         { group: "sosmed",  icon: "img/behance.png",   label: "Shopee",   url: "https://shopee.co.id/" },
         { group: "project", icon: "💬", label: "Pesan via WhatsApp",    url: "#pesan" },
         { group: "project", icon: "🎨", label: "Portofolio",       url: "https://behance.net/" },
