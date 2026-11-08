@@ -6,7 +6,7 @@ const SITE = {
     brand: "Nyils Design",
     bio: "Desain logo, kemasan & konten sosmed untuk UMKM.",
     avatar: "img/logo.jpg",        // ✅ GANTI: path ke gambar logo
-    whatsapp: "6281234567890",
+    whatsapp: "62895392167820",
 
   
     /* -------------------------------- 2. WARNA -------------------------------- */
