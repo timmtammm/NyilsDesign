@@ -4,8 +4,8 @@ CONFIG.JS — FILE UTAMA UNTUK MENGGANTI ISI & TEMA UMKM
 const SITE = {
     /* ------------------------------ 1. IDENTITAS ------------------------------ */
     brand: "Nyils Design",
-    bio: "Desain logo, kemasan & konten sosmed untuk UMKM.",
-    avatar: "img/logo.jpg",        // ✅ GANTI: path ke gambar logo
+    bio: "Desain logo, kemasan & konten sosmed.",
+    avatar: "img/logo.jpg",        
     whatsapp: "62895392167820",
 
   
@@ -53,7 +53,7 @@ const SITE = {
         { group: "sosmed",  icon: "img/behance.png",   label: "Shopee",   url: "https://shopee.co.id/" },
         { group: "project", icon: "💬", label: "Pesan via WhatsApp",    url: "#pesan" },
         { group: "project", icon: "🎨", label: "Portofolio",       url: "https://behance.net/" },
-        { group: "project", icon: "📄", label: "Katalog Lengkap (PDF)", url: "https://example.com/katalog.pdf" }
+        { group: "project", icon: "📄", label: "Katalog Lengkap (PDF)", url: "https://drive.google.com/file/d/1rWujnHhKjv7ZQ1LU9xcTYz5-iRybbf3V/view?usp=drive_link" }
       ],
   
     /* ----------------------------- 5. LAYANAN & HARGA ----------------------------- */

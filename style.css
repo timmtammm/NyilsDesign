@@ -63,9 +63,12 @@
       gap: 64px;
       padding-top: 80px;
     }
+    
+    /* ✅ GANTI bagian ini */
     .profile {
       position: sticky;
-      top: 80px;
+      top: 50vh; /* 50vh = 50% dari tinggi layar */
+      transform: translateY(-50%); /* Menariknya ke atas setengah tinggi profil agar benar-benar tengah */
     }
   }
   
@@ -205,29 +208,46 @@
     list-style: none;
   }
   
-  .links a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    padding: 22px 18px;
-    border: 1px solid var(--line);
-    border-radius: var(--radius);
-    background: var(--card);
-    box-shadow: 0 1px 4px rgba(0, 0, 0, .04);
-    color: var(--ink);
-    font-size: 1.05rem;
-    font-weight: 700;
-    text-decoration: none;
-    transition: transform .15s, border-color .15s;
-  }
+  /* Kartu link */
+.links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 22px 18px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
   
-  .links a:hover,
-  .links a:focus-visible {
-    transform: translateY(-2px);
-    border-color: var(--primary);
-  }
+  /* ✅ GANTI: warna background tidak terlalu putih */
+  background: rgba(255, 255, 255, 0.85);  /* putih semi-transparan */
+  backdrop-filter: blur(10px);            /* efek blur untuk background */
   
+  box-shadow: 0 1px 4px rgba(0, 0, 0, .04);
+  color: var(--ink);
+  font-size: 1.05rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform .15s, border-color .15s, box-shadow .25s;
+}
+
+/* ✅ TAMBAHKAN: efek bercahaya saat hover */
+.links a:hover,
+.links a:focus-visible {
+  transform: translateY(-2px);
+  border-color: var(--primary);
+  box-shadow: 0 0 20px rgba(79, 70, 229, 0.4),   /* cahaya ungu */
+              0 0 40px rgba(79, 70, 229, 0.2);   /* cahaya menyebar */
+}
+  
+[data-theme="dark"] .links a {
+  background: rgba(15, 23, 42, 0.85);  /* gelap semi-transparan */
+}
+
+[data-theme="dark"] .links a:hover,
+[data-theme="dark"] .links a:focus-visible {
+  box-shadow: 0 0 20px rgba(255, 228, 92, 0.4),   /* cahaya kuning (accent) */
+              0 0 40px rgba(255, 228, 92, 0.2);
+}
   .links .icon {
     font-size: 1.3rem;
   }
