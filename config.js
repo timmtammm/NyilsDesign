@@ -49,10 +49,10 @@ const SITE = {
     /* --------------------------------- 4. LINK --------------------------------- */
     links: [
         { group: "sosmed",  icon: "img/instagram.png", label: "Instagram", url: "https://www.instagram.com/nyils.design/" },
-        { group: "sosmed",  icon: "img/tiktok.png",    label: "TikTok",    url: "https://www.tiktok.com/@kukuhbudisz" },
+        { group: "sosmed",  icon: "img/tiktok.png",    label: "TikTok",    url: "https://www.tiktok.com/@musaffit" },
         { group: "sosmed",  icon: "img/behance.png",   label: "Shopee",   url: "https://shopee.co.id/" },
         { group: "project", icon: "💬", label: "Pesan via WhatsApp",    url: "#pesan" },
-        { group: "project", icon: "🎨", label: "Portofolio",       url: "https://behance.net/" },
+        { group: "project", icon: "🎨", label: "Portofolio",       url: "https://drive.google.com/drive/folders/1mec5RupAjHORGtVdHaX3HYHREuM1Cugm?usp=drive_link" },
         { group: "project", icon: "📄", label: "Katalog Lengkap (PDF)", url: "https://drive.google.com/file/d/1rWujnHhKjv7ZQ1LU9xcTYz5-iRybbf3V/view?usp=drive_link" }
       ],
   
